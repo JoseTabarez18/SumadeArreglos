@@ -1,0 +1,44 @@
+'''nombre de la clase'''
+class Sumas:
+    '''matriz del arreglo'''
+    __arreglos = [[0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1,1,1],
+                  [2,2,2,2,2,2,2,2,2,2],[3,3,3,3,3,3,3,3,3,3],
+                  [4,4,4,4,4,4,4,4,4,4],[5,5,5,5,5,5,5,5,5,5],
+                  [6,6,6,6,6,6,6,6,6,6],[7,7,7,7,7,7,7,7,7,7],
+                  [8,8,8,8,8,8,8,8,8,8],[9,9,9,9,9,9,9,9,9,9]]
+    '''nombre de los metodos'''
+    __sumaf = int(0)
+    __filas = int(0)
+    __sumac = int(0)
+    __columnas = ''
+
+    '''metodo para realizar suma de filas'''
+    def Suma_Filas(self):
+        '''arreglo multidimencional'''
+        for f in range(0, len(self.__arreglos)):
+            self.__sumaf = 0
+            for c in range(0, len(self.__arreglos[f])):
+                self.__sumaf = self.__sumaf + self.__arreglos[f][c]
+                self.__filas = self.__filas,self.__sumaf
+                print(self.__arreglos[f][c], '\t', end="")
+            print('Fila', f, ' ', self.__sumaf)
+            print('\n')
+    '''metodo para realizar suma de las columnas'''
+    def Suma_Columnas(self):
+        for f2 in range(0, len(self.__arreglos)):
+            self.__sumac = 0
+            for c2 in range(0, len(self.__arreglos[f2])):
+                self.__sumac = self.__sumac + self.__arreglos[c2][f2]
+                print(self.__arreglos[c2][f2], '\t', end="")
+            print('Columna', f2, ' ', self.__sumac)
+            print('\n')
+
+    def getObtener_Sumaf(self):
+        return self._sumaf
+
+    def getObtener_Sumac(self):
+        return self.__sumac
+
+codigo = Sumas()
+codigo.Suma_Filas()
+codigo.Suma_Columnas()
